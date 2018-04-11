@@ -7,168 +7,179 @@
     android:orientation="horizontal"
     tools:context="com.example.android.scabblescore.MainActivity">
 
-<LinearLayout
-    android:layout_width="0dp"
-    android:layout_height="match_parent"
-    android:layout_weight="1"
-    android:orientation="vertical">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2"
-        android:fontFamily="sans-serif-smallcaps"
-        android:gravity="center"
-        android:text="PLAYER 1"
-        android:textColor="#2e8b57 "
-        android:textSize="36sp"
-        android:textStyle="bold" />
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2"
-        android:paddingRight="5dp"
-        android:paddingLeft="5dp"
-        android:orientation="horizontal">
-        <TextView
-            android:id="@+id/player1_total"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fontFamily="casual"
-            android:gravity="center_horizontal"
-            android:text="0"
-            android:textSize="36sp" />
-        <Button
-            android:layout_width="61dp"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#ed3b3b"
-            android:text="RESET"
-            android:textSize="12sp"
-            android:textColor="#420000"
-            android:layout_alignParentEnd="true"
-            android:onClick="player1Reset"/>
-    </RelativeLayout>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight ="1"
-        android:text="ADD TILE SCORES"
-        android:gravity="bottom"
-        android:textStyle="bold"
-        android:paddingLeft="20dp"
-        android:paddingBottom="5dp"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="horizontal"
-        android:paddingLeft="5dp"
-        android:paddingRight="5dp">
-
-        <Button
-            android:onClick="player1Add1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:backgroundTint="#ffdd77"
-            android:text="1" />
-
-        <Button
-            android:onClick="player1Add2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:backgroundTint="#ffdd77"
-            android:text="2" />
-
-        <Button
-            android:onClick="player1Add3"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:backgroundTint="#ffdd77"
-            android:text="3" />
-
-        <Button
-            android:onClick="player1Add4"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:backgroundTint="#ffdd77"
-            android:text="4" />
-
-        <Button
-            android:onClick="player1Add5"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:backgroundTint="#ffdd77"
-            android:text="5" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2"
-        android:orientation="horizontal"
-        android:paddingLeft="5dp"
-        android:paddingRight="5dp">
-
-        <Button
-            android:onClick="player1Double"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:backgroundTint="#ff7b77"
-            android:text="Double Word"
-            android:textColor="#ffffff" />
-
-        <Button
-            android:onClick="player1Triple"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:backgroundTint="#ffbc38"
-            android:text="Triple Word"
-            android:textColor="#ffffff" />
-    </LinearLayout>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight ="1"
-        android:text="OR\nENTER SCORE"
-        android:gravity="bottom"
-        android:textStyle="bold"
-        android:paddingLeft="20dp"
-        />
-    <EditText
-        android:id="@+id/player1_current_score"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2"
-        android:hint="CURRENT WORD SCORE"
-        android:textSize="14sp"
-        android:inputType="number"
-        android:textStyle="italic"
-        android:layout_margin="10dp"/>
-
-    <Button
-        android:onClick="player1AddToTotal"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:backgroundTint="#2e8b57"
-        android:text="Add to total"
-        android:textColor="#ffffff"
-        android:layout_margin="5dp"/>
-</LinearLayout>
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:fontFamily="sans-serif-smallcaps"
+            android:gravity="center"
+            android:text="PLAYER 1"
+            android:textColor="#2e8b57 "
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+            <TextView
+                android:id="@+id/player1_total"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="casual"
+                android:gravity="center_horizontal"
+                android:text="0"
+                android:textSize="36sp" />
+
+            <Button
+                android:layout_width="61dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:backgroundTint="#ed3b3b"
+                android:onClick="player1Reset"
+                android:text="RESET"
+                android:textColor="#420000"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:paddingBottom="5dp"
+            android:paddingLeft="20dp"
+            android:text="ADD TILE SCORES"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#ffdd77"
+                android:onClick="player1Add1"
+                android:text="1" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#ffdd77"
+                android:onClick="player1Add2"
+                android:text="2" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#ffdd77"
+                android:onClick="player1Add3"
+                android:text="3" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#ffdd77"
+                android:onClick="player1Add4"
+                android:text="4" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#ffdd77"
+                android:onClick="player1Add5"
+                android:text="5" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#ff7b77"
+                android:onClick="player1Double"
+                android:text="Double Word"
+                android:textColor="#ffffff" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#ffbc38"
+                android:onClick="player1Triple"
+                android:text="Triple Word"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:paddingLeft="20dp"
+            android:text="OR\nENTER SCORE"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/player1_current_score"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
+            android:layout_weight="2"
+            android:hint="CURRENT WORD SCORE"
+            android:inputType="number"
+            android:textSize="14sp"
+            android:textStyle="italic" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:backgroundTint="#2e8b57"
+            android:onClick="player1AddToTotal"
+            android:text="Add to total"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -184,9 +195,10 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="2"
-            android:paddingRight="5dp"
+            android:orientation="horizontal"
             android:paddingLeft="5dp"
-            android:orientation="horizontal">
+            android:paddingRight="5dp">
+
             <TextView
                 android:id="@+id/player2_total"
                 android:layout_width="match_parent"
@@ -195,26 +207,27 @@
                 android:gravity="center_horizontal"
                 android:text="0"
                 android:textSize="36sp" />
+
             <Button
                 android:layout_width="61dp"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#ed3b3b"
-                android:text="RESET"
-                android:textSize="12sp"
-                android:textColor="#420000"
                 android:layout_alignParentEnd="true"
-                android:onClick="player2Reset"/>
+                android:backgroundTint="#ed3b3b"
+                android:onClick="player2Reset"
+                android:text="RESET"
+                android:textColor="#420000"
+                android:textSize="12sp" />
         </RelativeLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight ="1"
-            android:text="ADD TILE SCORES"
+            android:layout_weight="1"
             android:gravity="bottom"
-            android:textStyle="bold"
+            android:paddingBottom="5dp"
             android:paddingLeft="20dp"
-            android:paddingBottom="5dp"/>
+            android:text="ADD TILE SCORES"
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -225,43 +238,43 @@
             android:paddingRight="5dp">
 
             <Button
-                android:onClick="player2Add1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:backgroundTint="#ffdd77"
+                android:onClick="player2Add1"
                 android:text="1" />
 
             <Button
-                android:onClick="player2Add2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:backgroundTint="#ffdd77"
+                android:onClick="player2Add2"
                 android:text="2" />
 
             <Button
-                android:onClick="player2Add3"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:backgroundTint="#ffdd77"
+                android:onClick="player2Add3"
                 android:text="3" />
 
             <Button
-                android:onClick="player2Add4"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:backgroundTint="#ffdd77"
+                android:onClick="player2Add4"
                 android:text="4" />
 
             <Button
-                android:onClick="player2Add5"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:backgroundTint="#ffdd77"
+                android:onClick="player2Add5"
                 android:text="5" />
         </LinearLayout>
 
@@ -274,52 +287,53 @@
             android:paddingRight="5dp">
 
             <Button
-                android:onClick="player2Double"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:backgroundTint="#ff7b77"
+                android:onClick="player2Double"
                 android:text="Double Word"
                 android:textColor="#ffffff" />
 
             <Button
-                android:onClick="player2Triple"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:backgroundTint="#ffbc38"
+                android:onClick="player2Triple"
                 android:text="Triple Word"
                 android:textColor="#ffffff" />
         </LinearLayout>
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight ="1"
-            android:text="OR\nENTER SCORE"
+            android:layout_weight="1"
             android:gravity="bottom"
-            android:textStyle="bold"
             android:paddingLeft="20dp"
-            />
+            android:text="OR\nENTER SCORE"
+            android:textStyle="bold" />
+
         <EditText
             android:id="@+id/player2_current_score"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:layout_margin="10dp"
             android:layout_weight="2"
             android:hint="CURRENT WORD SCORE"
-            android:textSize="14sp"
             android:inputType="number"
-            android:textStyle="italic"
-            android:layout_margin="10dp"/>
+            android:textSize="14sp"
+            android:textStyle="italic" />
 
         <Button
-            android:onClick="player2AddToTotal"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:layout_margin="5dp"
             android:layout_weight="1"
             android:backgroundTint="#2187d1"
+            android:onClick="player2AddToTotal"
             android:text="Add to total"
-            android:textColor="#ffffff"
-            android:layout_margin="5dp"/>
+            android:textColor="#ffffff" />
     </LinearLayout>
 </LinearLayout>
 
